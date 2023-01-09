@@ -19,8 +19,9 @@
       "org.apache.karaf.system.core",
       "org.apache.servicemix.bundles.dom4j",
       { "name": "com_google_code_findbugs_jsr305", "compile_only": true }
-
+      
     ],
+    
     "CORE_DEPS": [
       ":COMPILE",
       "//core/api:onos-api",
@@ -99,7 +100,8 @@
       "reflectasm",
       "asm",
       "minlog",
-      "objenesis"
+      "objenesis",
+      { "name": "org.apache.felix.scr.annotations", "compile_only": true }
     ],
     "CLI": [
       "org.apache.karaf.shell.core",
@@ -361,6 +363,7 @@
     "stax2-api": "mvn:org.codehaus.woodstox:stax2-api:4.0.0",
     "concurrent-hashmap": "mvn:com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:1.0",
     "gnu-idn": "mvn:org.gnu.inet:libidn:1.15",
-    "sigar":"mvn:org.knowhowlab.osgi:sigar:1.6.5_01"
+    "sigar":"mvn:org.knowhowlab.osgi:sigar:1.6.5_01",
+    "org.apache.felix.scr.annotations": "mvn:org.apache.felix:org.apache.felix.scr.annotations:1.9.12"
   }
 }
