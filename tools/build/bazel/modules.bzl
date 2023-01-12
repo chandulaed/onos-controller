@@ -74,6 +74,11 @@ PROTOCOL_MAP = {
     "//protocols/tl1/ctl:onos-protocols-tl1-ctl": [],
     "//protocols/xmpp/core/api:onos-protocols-xmpp-core-api": [],
     "//protocols/xmpp/core/ctl:onos-protocols-xmpp-core-ctl": [],
+    "//protocols/sdnwise/protocol:onos-protocols-sdnwise-protocol":[],
+    "//protocols/sdnwise/api:onos-protocols-sdnwise-api":[],
+    "//protocols/sdnwise/ctl:onos-protocols-sdnwise-ctl":[],
+    "//protocols/sdnwise/driver:onos-protocols-sdnwise-driver":[],
+
 }
 
 PROTOCOL_APP_MAP = {
@@ -100,6 +105,12 @@ PROVIDER_MAP = {
     "//providers/snmp/device:onos-providers-snmp-device": [],
     "//providers/lisp/device:onos-providers-lisp-device": [],
     "//providers/tl1/device:onos-providers-tl1-device": [],
+    '//providers/sdnwise/device:onos-providers-sdnwise-device':[],
+    '//providers/sdnwise/devicecontrol:onos-providers-sdnwise-devicecontrol':[],
+    '//providers/sdnwise/flow:onos-providers-sdnwise-flow':[],
+    '//providers/sdnwise/packet:onos-providers-sdnwise-packet':[],
+    '//providers/sdnwise/sensornode:onos-providers-sdnwise-sensornode':[]
+
 }
 
 PROVIDER_APP_MAP = {
@@ -124,6 +135,7 @@ PROVIDER_APP_MAP = {
     "//providers/lisp:onos-providers-lisp-oar": [],
     "//providers/tl1:onos-providers-tl1-oar": [],
     "//providers/xmpp/device:onos-providers-xmpp-device-oar": [],
+    "//providers/sdnwise/app:onos-providers-sdnwise-app-oar":[]
 }
 
 #

@@ -103,6 +103,9 @@
       "objenesis",
       { "name": "org.apache.felix.scr.annotations", "compile_only": true }
     ],
+    "FELIXANO": [
+      { "name": "org.apache.felix.scr.annotations", "compile_only": true }
+    ],
     "CLI": [
       "org.apache.karaf.shell.core",
       "//cli:onos-cli"
@@ -364,6 +367,9 @@
     "concurrent-hashmap": "mvn:com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:1.0",
     "gnu-idn": "mvn:org.gnu.inet:libidn:1.15",
     "sigar":"mvn:org.knowhowlab.osgi:sigar:1.6.5_01",
-    "org.apache.felix.scr.annotations": "mvn:org.apache.felix:org.apache.felix.scr.annotations:1.9.12"
+    "org.apache.felix.scr.annotations": "mvn:org.apache.felix:org.apache.felix.scr.annotations:1.9.12",
+
+    "sdnwise": "mvn:com.github.sdnwiselab:sdn-wise-core:4.0.0"
+
   }
 }
