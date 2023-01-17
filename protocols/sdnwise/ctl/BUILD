@@ -1,4 +1,4 @@
-COMPILE_DEPS = CORE_DEPS + KRYO+ [
+COMPILE_DEPS = CORE_DEPS + [
     "@openflowj//jar",
     '@sdnwise//jar',
     '//protocols/sdnwise/api:onos-protocols-sdnwise-api',
@@ -7,8 +7,12 @@ COMPILE_DEPS = CORE_DEPS + KRYO+ [
     '@io_netty_netty//jar'
 ]
 
+TEST_DEPS = TEST + [
+    "//core/api:onos-api-tests",
+]
 
 osgi_jar_with_tests (
     visibility = ["//visibility:public"],
     deps = COMPILE_DEPS,
+    test_deps = TEST_DEPS,
 )

@@ -1,4 +1,4 @@
-COMPILE_DEPS = CORE_DEPS + KRYO + [
+COMPILE_DEPS = CORE_DEPS + [
     '@openflowj//jar',
     '@sdnwise//jar',
     '//protocols/sdnwise/api:onos-protocols-sdnwise-api',

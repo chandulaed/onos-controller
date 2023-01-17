@@ -1,10 +1,13 @@
 package org.onosproject.sdnwise.controller.impl;
 
 import com.google.common.collect.Sets;
-import org.apache.felix.scr.annotations.Activate;
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Deactivate;
-import org.apache.felix.scr.annotations.Service;
+//import org.apache.felix.scr.annotations.Activate;
+//import org.apache.felix.scr.annotations.Component;
+//import org.apache.felix.scr.annotations.Deactivate;
+import org.osgi.service.component.propertytypes.ServiceDescription;
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Deactivate;
 import org.onosproject.net.DeviceId;
 import org.onosproject.sdnwise.controller.SDNWiseController;
 import org.onosproject.sdnwise.controller.SDNWiseEventListener;
@@ -30,7 +33,7 @@ import static org.onlab.util.Tools.namedThreads;
  * Created by aca on 2/18/15.
  */
 @Component(immediate = true)
-@Service
+@ServiceDescription("Sdn-Wise")
 public class SDNWiseControllerImpl implements SDNWiseController {
     private static final Logger log = LoggerFactory.getLogger(SDNWiseControllerImpl.class);
 
@@ -122,6 +125,7 @@ public class SDNWiseControllerImpl implements SDNWiseController {
 
     @Activate
     public void activate() {
+        log.info("Started SDNWiseController1");
         ctrl.start(agent);
         log.info("Started SDNWiseController");
     }

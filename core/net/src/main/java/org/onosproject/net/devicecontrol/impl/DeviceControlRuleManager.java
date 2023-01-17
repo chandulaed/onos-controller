@@ -1,9 +1,13 @@
 package org.onosproject.net.devicecontrol.impl;
 
-import org.apache.felix.scr.annotations.Activate;
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Deactivate;
-import org.apache.felix.scr.annotations.Service;
+//import org.apache.felix.scr.annotations.Activate;
+//import org.apache.felix.scr.annotations.Component;
+//import org.apache.felix.scr.annotations.Deactivate;
+//import org.apache.felix.scr.annotations.Service;
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Deactivate;
+import org.osgi.service.component.propertytypes.ServiceDescription;
 import org.onosproject.event.ListenerRegistry;
 import org.onosproject.net.devicecontrol.DeviceControlEvent;
 import org.onosproject.net.devicecontrol.DeviceControlProviderService;
@@ -22,7 +26,7 @@ import static org.slf4j.LoggerFactory.getLogger;
  * Created by aca on 6/19/15.
  */
 @Component(immediate = true)
-@Service
+@ServiceDescription("Device Control Rule Manager")
 public class DeviceControlRuleManager
         extends AbstractProviderRegistry<DeviceControlRuleProvider, DeviceControlProviderService>
         implements DeviceControlRuleService, DeviceControlRuleProviderRegistry {

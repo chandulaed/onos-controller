@@ -92,6 +92,7 @@ public class OpenFlowClassifierManager extends ListenerRegistry<OpenFlowEvent, O
         }
 
         log.info("Started Openflow Manager");
+        log.info("Started Openflow Manager12");
     }
 
     @Deactivate

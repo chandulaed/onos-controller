@@ -15,11 +15,16 @@
  */
 package org.onosproject.provider.sdnwise.device.impl;
 
-import org.apache.felix.scr.annotations.Activate;
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Deactivate;
-import org.apache.felix.scr.annotations.Reference;
-import org.apache.felix.scr.annotations.ReferenceCardinality;
+//import org.apache.felix.scr.annotations.Activate;
+//import org.apache.felix.scr.annotations.Component;
+//import org.apache.felix.scr.annotations.Deactivate;
+//import org.apache.felix.scr.annotations.Reference;
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Deactivate;
+import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceCardinality;
+//import org.apache.felix.scr.annotations.ReferenceCardinality;
 import org.onlab.packet.ChassisId;
 import org.onosproject.net.*;
 import org.onosproject.net.device.DeviceProvider;
@@ -44,10 +49,10 @@ import static org.onosproject.net.DeviceId.deviceId;
 public class SDNWiseDeviceProvider extends AbstractProvider implements DeviceProvider {
     private static final Logger LOG = LoggerFactory.getLogger(SDNWiseDeviceProvider.class);
 
-    @Reference(cardinality = ReferenceCardinality.MANDATORY_UNARY)
+    @Reference(cardinality = ReferenceCardinality.MANDATORY)
     protected DeviceProviderRegistry providerRegistry;
 
-    @Reference(cardinality = ReferenceCardinality.MANDATORY_UNARY)
+    @Reference(cardinality = ReferenceCardinality.MANDATORY)
     protected SDNWiseController controller;
 
     private DeviceProviderService providerService;

@@ -1,10 +1,14 @@
 package org.onosproject.store.atomix.primitives.impl;
 
 import com.google.common.collect.ImmutableSet;
-import org.apache.felix.scr.annotations.Activate;
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Deactivate;
-import org.apache.felix.scr.annotations.Service;
+//import org.apache.felix.scr.annotations.Activate;
+//import org.apache.felix.scr.annotations.Component;
+//import org.apache.felix.scr.annotations.Deactivate;
+//import org.apache.felix.scr.annotations.Service;
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Deactivate;
+import org.osgi.service.component.propertytypes.ServiceDescription;
 import org.onlab.packet.MacAddress;
 import org.onosproject.net.DefaultSensorNode;
 import org.onosproject.net.DeviceId;
@@ -37,7 +41,7 @@ import static org.slf4j.LoggerFactory.getLogger;
  * Created by aca on 3/15/15.
  */
 @Component(immediate = true)
-@Service
+@ServiceDescription("Simple Sensor Node Store")
 public class SimpleSensorNodeStore
         extends AbstractStore<SensorNodeEvent, SensorNodeStoreDelegate>
         implements SensorNodeStore {

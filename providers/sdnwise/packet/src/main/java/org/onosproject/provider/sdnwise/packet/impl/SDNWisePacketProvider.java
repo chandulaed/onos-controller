@@ -1,11 +1,19 @@
 package org.onosproject.provider.sdnwise.packet.impl;
 
+//import com.google.common.collect.Lists;
+//import org.apache.felix.scr.annotations.Activate;
+//import org.apache.felix.scr.annotations.Component;
+//import org.apache.felix.scr.annotations.Deactivate;
+//import org.apache.felix.scr.annotations.Reference;
+//import org.apache.felix.scr.annotations.ReferenceCardinality;
 import com.google.common.collect.Lists;
-import org.apache.felix.scr.annotations.Activate;
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Deactivate;
-import org.apache.felix.scr.annotations.Reference;
-import org.apache.felix.scr.annotations.ReferenceCardinality;
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Deactivate;
+import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceCardinality;
+
+
 import org.onlab.packet.Data;
 import org.onlab.packet.Ethernet;
 import org.onosproject.net.ConnectPoint;
@@ -78,28 +86,28 @@ public class SDNWisePacketProvider extends AbstractProvider
         implements PacketProvider, LinkProvider, SensorNodeProvider, GroupManagementProvider {
     private static final Logger LOG = LoggerFactory.getLogger(SDNWisePacketProvider.class);
 
-    @Reference(cardinality = ReferenceCardinality.MANDATORY_UNARY)
+    @Reference(cardinality = ReferenceCardinality.MANDATORY)
     protected PacketProviderRegistry packetProviderRegistry;
 
-    @Reference(cardinality = ReferenceCardinality.MANDATORY_UNARY)
+    @Reference(cardinality = ReferenceCardinality.MANDATORY)
     protected DeviceService deviceService;
 
-    @Reference(cardinality = ReferenceCardinality.MANDATORY_UNARY)
+    @Reference(cardinality = ReferenceCardinality.MANDATORY)
     protected SDNWiseController controller;
 
-    @Reference(cardinality = ReferenceCardinality.MANDATORY_UNARY)
+    @Reference(cardinality = ReferenceCardinality.MANDATORY)
     protected LinkProviderRegistry linkProviderRegistry;
 
-    @Reference(cardinality = ReferenceCardinality.MANDATORY_UNARY)
+    @Reference(cardinality = ReferenceCardinality.MANDATORY)
     protected LinkService linkService;
 
-    @Reference(cardinality = ReferenceCardinality.MANDATORY_UNARY)
+    @Reference(cardinality = ReferenceCardinality.MANDATORY)
     protected SensorNodeProviderRegistry sensorNodeProviderRegistry;
 
-    @Reference(cardinality = ReferenceCardinality.MANDATORY_UNARY)
+    @Reference(cardinality = ReferenceCardinality.MANDATORY)
     protected GroupManagementProviderRegistry groupManagementProviderRegistry;
 
-    @Reference(cardinality = ReferenceCardinality.MANDATORY_UNARY)
+    @Reference(cardinality = ReferenceCardinality.MANDATORY)
     protected SensorNodeService sensorNodeService;
 
     private PacketProviderService providerService;

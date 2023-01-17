@@ -1,11 +1,17 @@
 package org.onosproject.net.sensor.impl;
 
-import org.apache.felix.scr.annotations.Activate;
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Deactivate;
-import org.apache.felix.scr.annotations.Reference;
-import org.apache.felix.scr.annotations.ReferenceCardinality;
-import org.apache.felix.scr.annotations.Service;
+//import org.apache.felix.scr.annotations.Activate;
+//import org.apache.felix.scr.annotations.Component;
+//import org.apache.felix.scr.annotations.Deactivate;
+//import org.apache.felix.scr.annotations.Reference;
+//import org.apache.felix.scr.annotations.ReferenceCardinality;
+//import org.apache.felix.scr.annotations.Service;
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Deactivate;
+import org.osgi.service.component.propertytypes.ServiceDescription;
+import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceCardinality;
 import org.onlab.packet.MacAddress;
 import org.onosproject.event.ListenerRegistry;
 import org.onosproject.event.EventDeliveryService;
@@ -35,7 +41,7 @@ import static org.slf4j.LoggerFactory.getLogger;
  * Created by aca on 3/15/15.
  */
 @Component(immediate = true)
-@Service
+@ServiceDescription("Sensor Node Manger")
 public class SensorNodeManager
         extends AbstractProviderRegistry<SensorNodeProvider, SensorNodeProviderService>
         implements SensorNodeService, SensorNodeProviderRegistry {
@@ -45,10 +51,10 @@ public class SensorNodeManager
     private final ListenerRegistry<SensorNodeEvent, SensorNodeListener>
             listenerRegistry = new ListenerRegistry<>();
 
-    @Reference(cardinality = ReferenceCardinality.MANDATORY_UNARY)
+    @Reference(cardinality = ReferenceCardinality.MANDATORY)
     protected SensorNodeStore sensorNodeStore;
 
-    @Reference(cardinality = ReferenceCardinality.MANDATORY_UNARY)
+    @Reference(cardinality = ReferenceCardinality.MANDATORY)
     protected EventDeliveryService eventDispatcher;
 
     @Activate

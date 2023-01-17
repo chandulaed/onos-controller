@@ -9,6 +9,7 @@
     //apps/routing-api:onos-apps-routing-api
     //apps/route-service/api:onos-apps-route-service-api
     //apps/vpls:onos-apps-vpls
+    //providers/sdnwise/app:onos-providers-sdnwise-app
     //cli:onos-cli
     //core/api:onos-api
     //core/common:onos-core-common
@@ -62,3 +63,5 @@
     //deps:io_grpc_grpc_protobuf
     //deps:io_grpc_grpc_protobuf_lite
     //deps:io_grpc_grpc_stub
+
+
