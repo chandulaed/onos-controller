@@ -32,8 +32,8 @@ import static org.onlab.util.Tools.namedThreads;
 /**
  * Created by aca on 2/18/15.
  */
-@Component(immediate = true)
-@ServiceDescription("Sdn-Wise")
+@Component(immediate = true,service = SDNWiseController.class)
+@ServiceDescription("SDNWiseController")
 public class SDNWiseControllerImpl implements SDNWiseController {
     private static final Logger log = LoggerFactory.getLogger(SDNWiseControllerImpl.class);
 

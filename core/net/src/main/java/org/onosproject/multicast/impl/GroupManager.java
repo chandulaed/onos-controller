@@ -43,8 +43,8 @@ import static org.slf4j.LoggerFactory.getLogger;
 /**
  * Created by aca on 4/30/15.
  */
-@Component(immediate = true)
-@ServiceDescription("Group Manager")
+@Component(immediate = true,service = GroupManager.class)
+@ServiceDescription("GroupManager")
 public class GroupManager
         extends AbstractProviderRegistry<GroupManagementProvider, GroupManagementProviderService>
         implements GroupManagementService, GroupManagementProviderRegistry {

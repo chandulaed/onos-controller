@@ -40,8 +40,8 @@ import static org.slf4j.LoggerFactory.getLogger;
 /**
  * Created by aca on 3/15/15.
  */
-@Component(immediate = true)
-@ServiceDescription("Sensor Node Manger")
+@Component(immediate = true, service = SensorNodeManager.class)
+@ServiceDescription("SensorNodeManger")
 public class SensorNodeManager
         extends AbstractProviderRegistry<SensorNodeProvider, SensorNodeProviderService>
         implements SensorNodeService, SensorNodeProviderRegistry {

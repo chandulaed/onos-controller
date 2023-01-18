@@ -25,8 +25,8 @@ import static org.slf4j.LoggerFactory.getLogger;
 /**
  * Created by aca on 6/19/15.
  */
-@Component(immediate = true)
-@ServiceDescription("Device Control Rule Manager")
+@Component(immediate = true,service = DeviceControlRuleManager.class)
+@ServiceDescription("DeviceControlRuleManager")
 public class DeviceControlRuleManager
         extends AbstractProviderRegistry<DeviceControlRuleProvider, DeviceControlProviderService>
         implements DeviceControlRuleService, DeviceControlRuleProviderRegistry {
